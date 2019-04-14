@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>interview</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list   >
+    <ion-item   *ngFor="let que of jsonList" [routerLink]="['./',que.indexnumber]">  
+      <ion-label slot="start" color="primary"  style="display: contents;">Q{{que.indexnumber}}. </ion-label>
+      <ion-text color="primary" >
+          {{que.listname}}
+      </ion-text>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
